@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Desplegables Dinámicas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="campo">
+            <label for="lista1">Motivo de baja:</label>
+            <select id="lista1" onchange="actualizarLista2()">
+                <option value="">Seleccionar...</option>
+                <option value="administrativa">BAJA ADMINISTRATIVA</option>
+                <option value="instalacion">INSTALACION</option>
+                <option value="economicos">PROBLEMAS ECONÓMICOS</option>
+                <option value="mudanza">MUDANZA</option>
+                <option value="tecnicos">PROBLEMAS TÉCNICOS</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="lista2">Submotivo de baja</label>
+            <select id="lista2">
+                <option value="">Seleccionar...</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="lista3">Resultado de la gestion</label>
+            <select id="lista3">
+                <option value="">Seleccionar...</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="lista4">Comentarios:</label>
+            <select id="lista4">
+                <option value="">Seleccionar...</option>
+            </select>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
