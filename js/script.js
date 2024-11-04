@@ -1,4 +1,3 @@
-// Definir las opciones disponibles para la segunda lista según la selección de la primera lista
 const opciones = {
     administrativa: [
         { valor: "desconoce_activacion", texto: "Desconoce activación" },
@@ -44,27 +43,20 @@ const opciones = {
     ]
 };
 
-// Función para actualizar la segunda lista desplegable según la opción seleccionada en la primera lista
 function actualizarLista2() {
-    // Obtener la referencia a las listas desplegables
     const lista1 = document.getElementById("lista1");
     const lista2 = document.getElementById("lista2");
 
-    // Obtener la selección actual de la primera lista
     const seleccion = lista1.value;
 
-    // Limpiar las opciones actuales de la segunda lista
-    lista2.innerHTML = ""; // Limpiar todas las opciones previas
+    lista2.innerHTML = ""; 
 
-    // Agregar la opción por defecto "Seleccionar..."
     const opcionPorDefecto = document.createElement("option");
     opcionPorDefecto.value = "";
     opcionPorDefecto.textContent = "Seleccionar...";
     lista2.appendChild(opcionPorDefecto);
 
-    // Verificar si la selección tiene opciones disponibles en el objeto 'opciones'
     if (opciones[seleccion]) {
-        // Recorrer cada opción de la selección y añadirla a la segunda lista desplegable
         opciones[seleccion].forEach(opcion => {
             const nuevoElemento = document.createElement("option");
             nuevoElemento.value = opcion.valor;
@@ -74,7 +66,6 @@ function actualizarLista2() {
     }
 }
 
-// Asociar la función `actualizarLista2` al evento `change` de la primera lista
 document.addEventListener("DOMContentLoaded", function() {
     const lista1 = document.getElementById("lista1");
     lista1.addEventListener("change", actualizarLista2);
